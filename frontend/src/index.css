@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+    --color-darkBg: #151111;
+    --color-darkCard: #201a1a;
+    --color-darkBorder: #382e30;
+    --color-textPrimary: #fffaf4;
+    --color-textSecondary: #afac9b;
+    --color-textMuted: #76575d;
+    --color-accent: #6d9891;
+    --color-accentHover: #5f867f;
+    --color-geraldine: #f69f83;
+    --color-russett: #c98a76;
+    --color-trendDown: #c98a76;
+    --color-trendUp: #6d9891;
+}
+
+/* Custom global styles that match our premium dark palette */
+body {
+    background-color: #5b5b5b;
+    color: #fffaf4;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-gradient {
+    background: radial-gradient(circle at top left, rgba(109, 152, 145, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at bottom right, rgba(246, 159, 131, 0.08) 0%, transparent 40%),
+        #151111;
+}
+
+.glass-card {
+    background: rgba(32, 26, 26, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 46, 48, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Spinner Custom */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #151111;
+}
+
+.spinner-custom {
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(109, 152, 145, 0.2);
+    border-top: 4px solid #6d9891;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Table Customization */
+.table-custom th {
+    border-bottom: 1px solid #382e30;
+}
+
+.table-custom td {
+    border-bottom: 1px solid rgba(56, 46, 48, 0.4);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #151111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #382e30;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5f867f;
+}
